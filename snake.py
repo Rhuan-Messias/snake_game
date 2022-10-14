@@ -1,1 +1,1 @@
-print('snake')
+print('snake_game')
