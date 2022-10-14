@@ -13,6 +13,7 @@ class Cobrinha:
     def __init__(self):
         self.partes_do_corpo = []
         self.criar_cobrinha()
+        self.direção = self.partes_do_corpo[0]
     
     def criar_cobrinha(self):
         for i in POSIÇÃO_INICIAL:
@@ -32,11 +33,10 @@ class Cobrinha:
         self.partes_do_corpo[0].forward(RASTEJAR)
 
     def cima(self):
-        self.partes_do_corpo[0].setheading(90)
-    
+        self.direção.setheading(90)
     def baixo(self):
-        pass
+        self.direção.setheading(270)
     def esquerda(self):
-        pass
+        self.direção.setheading(180)
     def direita(self):
-        pass
+        self.direção.setheading(0)
