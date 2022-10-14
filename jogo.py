@@ -11,10 +11,11 @@ tela.tracer(0)
 cobrinha = c.Cobrinha() #vai rodar o __init__, criando a cobrinha com 3 segmentos
 
 tela.listen()
-#tela.onkey(cobrinha.cima,"Cima")
-#tela.onkey(cobrinha.baixo,"Baixo")
-#tela.onkey(cobrinha.esquerda,"Esquerda")
-#tela.onkey(cobrinha.direita,"Direita")
+#precisa ser em inglês, para indicar que são as setinhas 
+tela.onkey(cobrinha.cima,"Up")
+tela.onkey(cobrinha.baixo,"Down")
+tela.onkey(cobrinha.esquerda,"Left")
+tela.onkey(cobrinha.direita,"Right")
 
 
 jogo_rodando = True 
