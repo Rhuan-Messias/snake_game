@@ -21,9 +21,9 @@ tela.onkey(cobrinha.direita,"Right")
 jogo_rodando = True 
 while jogo_rodando:
     tela.update()
-    time.sleep(0.)
+    time.sleep(0.2)
     cobrinha.mover() #chamamos o método movimento 
-    #cobrinha.cima()
+    
 
 
 
