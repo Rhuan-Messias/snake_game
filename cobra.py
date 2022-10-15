@@ -17,7 +17,7 @@ class Cobrinha:
     def __init__(self):
         self.partes_do_corpo = []
         self.criar_cobrinha()
-        self.direção = self.partes_do_corpo[0]
+        self.cabeça = self.partes_do_corpo[0]
     
     def criar_cobrinha(self):
         for i in POSIÇÃO_INICIAL:
@@ -34,17 +34,17 @@ class Cobrinha:
             posição_x = self.partes_do_corpo[parte-1].xcor()
             posição_y = self.partes_do_corpo[parte-1].ycor()
             self.partes_do_corpo[parte].goto(posição_x,posição_y)
-        self.head.forward(RASTEJAR)
+        self.cabeça.forward(RASTEJAR)
 
     def cima(self):
-        if self.head.heading() != BAIXO:
-            self.direção.setheading(CIMA)
+        if self.cabeça.heading() != BAIXO:
+            self.cabeça.setheading(CIMA)
     def baixo(self):
-        if self.head.heading() != CIMA:
-            self.direção.setheading(BAIXO)
+        if self.cabeça.heading() != CIMA:
+            self.cabeça.setheading(BAIXO)
     def esquerda(self):
-        if self.head.heading() != DIREITA:
-            self.direção.setheading(ESQUERDA)
+        if self.cabeça.heading() != DIREITA:
+            self.cabeça.setheading(ESQUERDA)
     def direita(self):
-        if self.head.heading() != ESQUERDA:
-            self.direção.setheading(DIREITA)
+        if self.cabeça.heading() != ESQUERDA:
+            self.cabeça.setheading(DIREITA)
