@@ -4,6 +4,10 @@ import turtle as t
 # maiúsculas
 POSIÇÃO_INICIAL = [(0,0),(-20,0),(-40,0)]
 RASTEJAR = 20
+CIMA = 90
+BAIXO = 270
+DIREITA = 0
+ESQUERDA = 180 
 
 #classe começa com letra maiúscula 
 # Toda vez que crio uma cobra dessa classe, aparecerá as 3 partes do
@@ -30,13 +34,17 @@ class Cobrinha:
             posição_x = self.partes_do_corpo[parte-1].xcor()
             posição_y = self.partes_do_corpo[parte-1].ycor()
             self.partes_do_corpo[parte].goto(posição_x,posição_y)
-        self.partes_do_corpo[0].forward(RASTEJAR)
+        self.head.forward(RASTEJAR)
 
     def cima(self):
-        self.direção.setheading(90)
+        if self.head.heading() != BAIXO:
+            self.direção.setheading(CIMA)
     def baixo(self):
-        self.direção.setheading(270)
+        if self.head.heading() != CIMA:
+            self.direção.setheading(BAIXO)
     def esquerda(self):
-        self.direção.setheading(180)
+        if self.head.heading() != DIREITA:
+            self.direção.setheading(ESQUERDA)
     def direita(self):
-        self.direção.setheading(0)
+        if self.head.heading() != ESQUERDA:
+            self.direção.setheading(DIREITA)
